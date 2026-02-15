@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { estilosInicioSesion as styles } from './Theme/apptheme';
+import { estilosInicioSesion as styles } from '../Theme/apptheme';
 
 export const InicioSesion = () => {
   const navigation = useNavigation<any>();

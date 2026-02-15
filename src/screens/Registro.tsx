@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
-import { estilosRegistro as styles } from './Theme/apptheme';
+import { estilosRegistro as styles } from '../Theme/apptheme';
 import { useNavigation } from '@react-navigation/native';
 
 export const Registro = () => {

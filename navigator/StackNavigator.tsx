@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { InicioSesion } from '../src/InicioSesion';
-import { Registro } from '../src/Registro';
+import { InicioSesion } from '../src/screens/InicioSesion';
+import { Registro } from '../src/screens/Registro';
 
 const Stack = createStackNavigator();
 
