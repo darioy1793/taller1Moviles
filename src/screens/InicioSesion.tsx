@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { estilosInicioSesion as styles } from '../Theme/apptheme';
+import { CommonActions, useNavigation } from '@react-navigation/native';
+import { estilosInicioSesion as styles  } from '../Theme/apptheme';
+
+
+interface FormLogin{
+  email:string;
+  password:string;
+}
 
 export const InicioSesion = () => {
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation();
+  //hook usestate
+  const [formlogin, setformlogin] = useState<FormLogin>({
+    email:'',
+    password:'',
+
+  });
+
+  //funcion para capturar los valores del formulario
+  const handleChangeValue = (name:string,value:string):void => {
+    console.log(name," ",value);
+    setformlogin({
+      ...formlogin,
+      [name]:value,
+    });
+
+  }
 
   return (
     <View style={styles.contenedor}>
@@ -12,17 +34,19 @@ export const InicioSesion = () => {
         <Image
           style={styles.imagen}
           source={{
-            uri: 'https://tse4.mm.bing.net/th/id/OIP.l54ICAiwopa2RCt7J2URWwHaHa?cb=defcache2&defcache=1&rs=1&pid=ImgDetMain&o=7&rm=3',
+            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJVkVLoBiHJ4n9w4BOTG-hPVi5LfOQBGBmg&s',
           }}
         />
 
         <Text style={styles.titulo}>Inicio de sesión</Text>
 
         <Text style={styles.etiqueta}>Correo electrónico</Text>
-        <TextInput style={styles.input} />
+        <TextInput style={styles.input} onChangeText={(value) => handleChangeValue('email', value)}
+        placeholder='juan@gamil.com' keyboardType='email-address' />
 
         <Text style={styles.etiqueta}>Contraseña</Text>
-        <TextInput style={styles.input} secureTextEntry />
+        <TextInput style={styles.input} secureTextEntry onChangeText={(value) => handleChangeValue('password', value)}
+        placeholder='Sgbrg1237%'keyboardType='default' />
 
         <TouchableOpacity
           style={styles.boton} >
@@ -31,8 +55,9 @@ export const InicioSesion = () => {
 
         <View style={styles.filaRegistro}>
           <Text style={styles.textoRegistro}>¿No tienes cuenta? </Text>
-          <Text style={styles.enlaceRegistro} onPress={() => navigation.navigate('Registro')}>Regístrate aquí </Text>
+          <Text style={styles.enlaceRegistro} onPress={() => {navigation.dispatch(CommonActions.navigate('Registro'))}}>Regístrate aquí </Text>
         </View>
+    
       </View>
     </View>
   );

@@ -24,6 +24,7 @@ export const estilosInicioSesion = StyleSheet.create({
     marginBottom: 16,
     marginTop: 10,
     resizeMode: 'contain',
+    borderRadius: 70,
   },
 
   titulo: {
@@ -80,6 +81,11 @@ export const estilosInicioSesion = StyleSheet.create({
   },
 
   enlaceRegistro: {
+    fontSize: 14,
+    color: '#6FCF97',
+    fontWeight: '800',
+  },
+  enlaceInicio: {
     fontSize: 14,
     color: '#6FCF97',
     fontWeight: '800',
@@ -168,6 +174,49 @@ export const estilosRegistro = StyleSheet.create({
   enlaceInicio: {
     fontSize: 14,
     color: '#6FCF97',
+    fontWeight: '800',
+  },
+   imagen2: {
+    width: 140,
+    height: 140,
+    alignSelf: 'center',
+    marginBottom: 16,
+    marginTop: 10,
+    resizeMode: 'contain',
+    borderRadius: 70,
+   },
+   imagen3: {
+    width: '90%',
+    height: '50%',
+    alignSelf: 'center',
+    resizeMode: 'contain',
+   },
+    contenedor1: {
+    flex: 1,
+    backgroundColor: '#0d132a',
+    justifyContent: 'center',
+   
+  },
+  titulo1: {
+    fontSize: 58,
+    fontWeight: '800',
+    color: '#b4bdb8',
+    textAlign: 'center',
+   
+  }, 
+  filaInicio1: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 18,
+    backgroundColor: '#e2e3ebcd',
+    padding: 10,
+    borderRadius: 120,
+    width: '50%',
+    alignSelf: 'center',
+  },
+  enlaceInicio1: {
+    fontSize: 18,
+    color: '#0c1fad',
     fontWeight: '800',
   },
 });
