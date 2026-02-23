@@ -14,7 +14,7 @@ export const estilosInicioSesion = StyleSheet.create({
     borderRadius: 14,
     padding: 20,
     borderWidth: 2,
-    borderColor: '#6FCF97',
+    borderColor: '#0b368b',
   },
 
   imagen: {
@@ -30,7 +30,7 @@ export const estilosInicioSesion = StyleSheet.create({
   titulo: {
     fontSize: 28,
     fontWeight: '800',
-    color: '#6FCF97',
+    color: '#2e1a6b',
     textAlign: 'center',
     marginBottom: 18,
   },
@@ -45,7 +45,7 @@ export const estilosInicioSesion = StyleSheet.create({
 
   input: {
     borderWidth: 2,
-    borderColor: '#6FCF97',
+    borderColor: '#243186',
     borderRadius: 10,
     paddingHorizontal: 12,
     paddingVertical: 12,
@@ -55,7 +55,7 @@ export const estilosInicioSesion = StyleSheet.create({
   },
 
   boton: {
-    backgroundColor: '#6FCF97',
+    backgroundColor: '#1e2180',
     borderRadius: 10,
     paddingVertical: 14,
     marginTop: 22,
@@ -82,12 +82,12 @@ export const estilosInicioSesion = StyleSheet.create({
 
   enlaceRegistro: {
     fontSize: 14,
-    color: '#6FCF97',
+    color: '#2d1299',
     fontWeight: '800',
   },
   enlaceInicio: {
     fontSize: 14,
-    color: '#6FCF97',
+    color: '#371393',
     fontWeight: '800',
   },
 });
@@ -106,7 +106,7 @@ export const estilosRegistro = StyleSheet.create({
     borderRadius: 14,
     padding: 20,
     borderWidth: 2,
-    borderColor: '#6FCF97',
+    borderColor: '#0b368b',
   },
 
   imagen: {
@@ -121,7 +121,7 @@ export const estilosRegistro = StyleSheet.create({
   titulo: {
     fontSize: 28,
     fontWeight: '800',
-    color: '#6FCF97',
+    color: '#2e1a6b',
     textAlign: 'center',
     marginBottom: 18,
   },
@@ -136,7 +136,7 @@ export const estilosRegistro = StyleSheet.create({
 
   input: {
     borderWidth: 2,
-    borderColor: '#6FCF97',
+    borderColor: '#243186',
     borderRadius: 10,
     paddingHorizontal: 12,
     paddingVertical: 12,
@@ -146,7 +146,7 @@ export const estilosRegistro = StyleSheet.create({
   },
 
   boton: {
-    backgroundColor: '#6FCF97',
+    backgroundColor: '#1e2180',
     borderRadius: 10,
     paddingVertical: 14,
     marginTop: 22,
@@ -173,7 +173,7 @@ export const estilosRegistro = StyleSheet.create({
 
   enlaceInicio: {
     fontSize: 14,
-    color: '#6FCF97',
+    color: '#2d1299',
     fontWeight: '800',
   },
    imagen2: {
