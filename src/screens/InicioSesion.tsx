@@ -42,11 +42,11 @@ export const InicioSesion = () => {
 
         <Text style={styles.etiqueta}>Correo electrónico</Text>
         <TextInput style={styles.input} onChangeText={(value) => handleChangeValue('email', value)}
-        placeholder='juan@gamil.com' keyboardType='email-address' />
+        placeholder='email@gmail.com' keyboardType='email-address' />
 
         <Text style={styles.etiqueta}>Contraseña</Text>
         <TextInput style={styles.input} secureTextEntry onChangeText={(value) => handleChangeValue('password', value)}
-        placeholder='Sgbrg1237%'keyboardType='default' />
+        placeholder='Password'keyboardType='default' />
 
         <TouchableOpacity
           style={styles.boton} >

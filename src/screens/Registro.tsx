@@ -44,17 +44,17 @@ export const Registro = () => {
 
         <Text style={styles.etiqueta}>Nombre</Text>
         <TextInput style={styles.input} onChangeText={(value) => handleChangeValue('nombre', value)} 
-          placeholder='Juen Perez' keyboardType='default'/>
+          placeholder='Dario Almachi' keyboardType='default'/>
         <Text style={styles.etiqueta}>Correo electrónico</Text>
-        <TextInput style={styles.input} onChangeText={(value) => handleChangeValue('email', value)} placeholder='juan@gamil.com' keyboardType='email-address' />
+        <TextInput style={styles.input} onChangeText={(value) => handleChangeValue('email', value)} placeholder='email@gmail.com' keyboardType='email-address' />
 
         <Text style={styles.etiqueta}>Contraseña</Text>
         <TextInput style={styles.input} secureTextEntry onChangeText={(value) => handleChangeValue('password', value)}
-        placeholder='Sgbrg1237%' keyboardType='default' />
+        placeholder='Password' keyboardType='default' />
 
         <Text style={styles.etiqueta}>Confirmar contraseña</Text>
         <TextInput style={styles.input} secureTextEntry onChangeText={(value) => handleChangeValue('confirmPassword', value)}
-        placeholder='Sgbrg1237%' keyboardType='default' />
+        placeholder='Password' keyboardType='default' />
 
         <TouchableOpacity style={styles.boton}>
           <Text style={styles.textoBoton}>Registrarse</Text>
