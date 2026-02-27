@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, Modal, Text, TouchableOpacity, useWindowDimensions, View } from 'react-native'
+import { FlatList, Modal, Text, TouchableOpacity, useWindowDimensions, View, Alert } from 'react-native'
 import { Cart } from '../Productos';
 import Icon from '@expo/vector-icons/MaterialIcons';
 import { stylesGlobal } from '../../../Theme/apptheme';
@@ -13,6 +13,7 @@ interface Props{
 
 export const ModalCart = ({isVisible, cart, hiddenModal, resetCart}:Props) => {
     const {width} = useWindowDimensions();
+    
      //funcion para calcular el total de la compra
     const totalPay = ():number => {
         let total:number = 0;
@@ -24,8 +25,11 @@ export const ModalCart = ({isVisible, cart, hiddenModal, resetCart}:Props) => {
     //funcion para realizar la compra
     const handleBuy = ():void => {
         //aqui se podria realizar la logica para procesar el pago y finalizar la compra
-        resetCart();
-        hiddenModal();
+        Alert.alert(
+            '¡Compra Exitosa!',
+            '¡Gracias por tu compra!',
+            [{text: 'OK', onPress: () => {resetCart(); hiddenModal();}}]
+        );
         
     }
 
@@ -44,11 +48,11 @@ export const ModalCart = ({isVisible, cart, hiddenModal, resetCart}:Props) => {
             </View>
           </View>
           <View style={stylesGlobal.headerTabla}>
-            <Text style={{...stylesGlobal.headerTextTable, marginHorizontal:10, color:'#222'}}>Producto</Text>
+            <Text style={{...stylesGlobal.headerTextTable, marginHorizontal:10,}}>Producto</Text>
             <View style={stylesGlobal.headerDescription}>
-            <Text style={{...stylesGlobal.headerTextTable, marginHorizontal:10, color:'#222'}}>Pre.</Text>
-            <Text style={{...stylesGlobal.headerTextTable, marginHorizontal:10, color:'#222'}}>Cant.</Text>
-            <Text style={{...stylesGlobal.headerTextTable, marginHorizontal:10, color:'#222'}}>Total</Text>
+            <Text style={{...stylesGlobal.headerTextTable, marginHorizontal:10, }}>Pre.</Text>
+            <Text style={{...stylesGlobal.headerTextTable, marginHorizontal:10,}}>Cant.</Text>
+            <Text style={{...stylesGlobal.headerTextTable, marginHorizontal:10, }}>Total</Text>
             </View>
           </View>
            <FlatList

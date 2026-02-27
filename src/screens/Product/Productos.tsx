@@ -78,11 +78,9 @@ export const Productos = () => {
     
     if(existingProduct){
       //si existe, actualizar la cantidad y el total
-      const updatedCart = cart.map(item => 
-        item.id === id 
+      const updatedCart = cart.map(item => item.id === id 
           ? {...item, quantity: item.quantity + quantity, total: product.price * (item.quantity + quantity)}
-          : item
-      );
+          : item);
       setcart(updatedCart);
     } else {
       //crear el objeto del producto

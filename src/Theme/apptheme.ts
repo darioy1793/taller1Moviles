@@ -304,7 +304,7 @@ export  const stylesGlobal = StyleSheet.create({
     alignItems:'center',
   },
   titleModal:{
-    fontSize:15,
+    fontSize:20,
     fontWeight:'bold',
     color:'#0c1fad',
   },
@@ -386,6 +386,7 @@ export  const stylesGlobal = StyleSheet.create({
     headerTextTable:{
         fontSize:20,
         fontWeight:'bold',
+        color:'#222'
     },
     containerTotalPay:{
         alignItems:'flex-end',
